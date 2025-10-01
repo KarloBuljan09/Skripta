@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skripta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Skripta - Karlo Buljan</h1>
+    <nav>
+      <a href="#css-html">Bilješke sa predavanja</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="css-html" class="post">
+      <h2>Kako dodati CSS u HTML</h2>
+      <p>Danas smo učili kako povezati CSS sa HTML-om. Postoje tri načina:</p>
+      <ul>
+        <li><strong>Inline CSS:</strong> direktno u elementu, npr. <code>&lt;p style="color:red;"&gt;</code></li>
+        <li><strong>Internal CSS:</strong> unutar &lt;style&gt; taga u &lt;head&gt;</li>
+        <li><strong>External CSS:</strong> povezivanje vanjskog .css fajla koristeći <code>&lt;link&gt;</code></li>
+      </ul>
+      <p>Uglavnom koristimo vanjski CSS jer je najorganiziraniji i lakši za održavanje.</p>
+    </section>
+  
+    <section id="box-model" class="post">
+      <h2>CSS Box Model</h2>
+      <p>CSS box model opisuje kako se HTML elementi prikazuju kao pravougaonici na stranici.</p>
+      <ul>
+        <li><strong>Content:</strong> Sadržaj (tekst, slike...)</li>
+        <li><strong>Padding:</strong> Prazan prostor oko sadržaja</li>
+        <li><strong>Border:</strong> Okvir oko paddinga</li>
+        <li><strong>Margin:</strong> Vanjski razmak između elemenata</li>
+      </ul>
+      <p>Sve ove komponente utiču na konačne dimenzije i poziciju elementa.</p>
+    </section>
+
+    <section id="pozadinska grafika" class="post">
+      <h2>Uređivanje pozadinske grafike u Box modelu</h2>
+      <p>Pozadinska grafika se postavlja pomoću CSS svojstva background, a može se prilagoditi veličina, pozicija i ponavljanje unutar box modela</p>
+<ul>
+  <li><strong>Background-image:</strong>Postavlja sliku kao pozadinu elementa</li>
+  
+  <li><strong>Background-size:</strong>Određuje veličinu pozadinske slike (npr. cover, contain, ili konkretne dimenzije)</li>
+  
+  <li><strong>Background-position:</strong>Pomiče sliku unutar elementa (npr. center, top left)</li>
+  
+  <li><strong>Background-repeat:</strong>Određuje ponavlja li se slika (repeat, no-repeat, itd.)</li>
+  
+  <li><strong>Background-clip:</strong>Kontroliše do kojeg dijela box modela se pozadina prikazuje (npr. content-box, padding-box, border-box)</li>
+</ul>
+<p>Kombinacijom ovih svojstava možemo precizno kontrolirati kako se pozadinska grafika prikazuje unutar svakog dijela box modela.</p>
+    </section>
+ 
+    <section id="opacity" class="post">
+      <h2>Opacity - Gradients</h2>
+      <p>Svojstva opacity i gradient koriste se za postizanje vizualnih efekata kao što su prozirnost i prijelazi boja.</p>
+      <ul>
+        <li><strong>Opacity:</strong>Određuje prozirnost cijelog elementa (vrijednosti od 0 do 1, gdje je 0 potpuno prozirno, a 1 potpuno vidljivo)</li>
+        <li><strong>RGBA boje:</strong>Omogućuju postavljanje prozirnosti samo na boju pomoću četvrte vrijednosti (npr. rgba(0, 0, 0, 0.5))</li>
+        <li><strong>Linear-gradient:</strong>Stvara prijelaz između dvije ili više boja u ravnoj liniji</li>
+        <li><strong>Radial-gradient:</strong>Stvara kružni ili eliptični prijelaz boja koji se širi iz središta</li>
+        <li><strong>Transparent:</strong>Koristi se za potpuno prozirne dijelove u gradientima</li>
+     </ul>
+<p>Korištenjem prozirnosti i prijelaza možemo poboljšati izgled elemenata i dodati vizualnu dubinu web stranici.</p>
+ </section>
+  
+    <section id="Sjene i zaobljeni rubovi" class="post">
+      <h2>Sjene i zaobljeni rubovi</h2>
+      <p>Svojstva za sjene i zaobljene rubove koriste se za estetsko poboljšanje elemenata na stranici.</p>
+      <ul>
+        <li><strong>Box-shadow:</strong>Dodaje sjenku oko cijelog elementa (može se podešavati pomak, razmazanost, boja)</li>
+        <li><strong>Text-shadow:</strong>Dodaje sjenku na tekst (omogućava efekte poput sjene ili svjetlucanja)</li>
+        <li><strong>Border-radius:</strong>Zaobljuje rubove elemenata (vrijednosti u pikselima ili postocima, npr. 10px, 50%)</li>
+        <li><strong>Inset shadow:</strong>Unutrašnja sjenka (kada se koristi inset unutar box-shadow)</li>
+        <li><strong>Multiple shadows:</strong>Moguće je dodati više sjenki odjednom, odvojene zarezima</li>
+      </ul>
+<p>Sjene i zaobljeni rubovi doprinose modernijem i privlačnijem dizajnu korisničkog sučelja.</p>
+    </section>
+   </main>
+</body>
+</html>
