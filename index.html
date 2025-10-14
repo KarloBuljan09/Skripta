@@ -15,6 +15,18 @@
   </header>
 
   <main>
+    <section>
+
+<h1>Sadržaj:</h1>
+<ul>
+  <li><a href="#css-html">Kako dodati CSS u HTML</a></li>
+  <li><a href="#box-model">CSS Box Model</a></li>
+  <li><a href="#pozadinska grafika">Uređivanje pozadinske grafike u Box modelu</a></li>
+</ul>
+
+  
+
+    </section>
     <section id="css-html" class="post">
       <h2>Kako dodati CSS u HTML</h2>
       <p>Danas smo učili kako povezati CSS sa HTML-om. Postoje tri načina:</p>
@@ -27,8 +39,8 @@
     </section>
   
     <section id="box-model" class="post">
-      <h2>CSS Box Model</h2>
-      <p>CSS box model opisuje kako se HTML elementi prikazuju kao pravougaonici na stranici.</p>
+      <h2>CSS Box Model</style></h2>
+      <p>CSS box model opisuje kako se HTML elementi prikazuju kao pravokutnici na stranici.</p>
       <ul>
         <li><strong>Content:</strong> Sadržaj (tekst, slike...)</li>
         <li><strong>Padding:</strong> Prazan prostor oko sadržaja</li>
@@ -55,7 +67,7 @@
 <p>Kombinacijom ovih svojstava možemo precizno kontrolirati kako se pozadinska grafika prikazuje unutar svakog dijela box modela.</p>
     </section>
  
-    <section id="opacity" class="post">
+    <section id="opasiti" class="post">
       <h2>Opacity - Gradients</h2>
       <p>Svojstva opacity i gradient koriste se za postizanje vizualnih efekata kao što su prozirnost i prijelazi boja.</p>
       <ul>
@@ -80,6 +92,67 @@
       </ul>
 <p>Sjene i zaobljeni rubovi doprinose modernijem i privlačnijem dizajnu korisničkog sučelja.</p>
     </section>
+    <section id="CSS pozicioniranje" class="post">
+  <h2>CSS Pozicioniranje</h2>
+  <p>
+    Svojstva za pozicioniranje u CSS-u omogućavaju kontrolu nad položajem elemenata na stranici.
+    Postoji pet osnovnih tipova pozicioniranja: <strong>static, relative, absolute, fixed</strong> i <strong>sticky</strong>.
+  </p>
+  <ul>
+    <li>
+      <strong>Static:</strong> Zadana vrijednost za sve elemente. Element se pozicionira u toku dokumenta bez posebnog podešavanja položaja.
+    </li>
+    <li>
+      <strong>Relative:</strong> Element se pozicionira u odnosu na svoj originalni položaj. Pomaci (<code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>) utiču samo na vizualni prikaz.
+    </li>
+    <li>
+      <strong>Absolute:</strong> Element se pozicionira u odnosu na najbližeg roditelja koji nije <code>static</code>. Ispada iz normalnog toka dokumenta.
+    </li>
+    <li>
+      <strong>Fixed:</strong> Element se pozicionira u odnosu na prozor preglednika i ostaje na mjestu čak i pri skrolanju stranice.
+    </li>
+    <li>
+      <strong>Sticky:</strong> Kombinacija <code>relative</code> i <code>fixed</code>. Element se ponaša kao relativan dok ne dođe do određene točke skrolanja, nakon čega „prilijepi“ (postane fiksiran).
+    </li>
+  </ul>
+  <p>
+    Razumijevanje različitih tipova pozicioniranja ključno je za pravilno raspoređivanje i organizaciju elemenata u web dizajnu.
+  </p>
+</section>
+<section id="Flexbox" class="post">
+  <h2>CSS Flexbox</h2>
+  <p>
+    Flexbox (Flexible Box Layout) je model rasporeda u CSS-u koji omogućava jednostavno i fleksibilno
+    poravnanje i raspored elemenata unutar kontejnera. Omogućava prilagođavanje elemenata različitim veličinama ekrana.
+  </p>
+  <ul>
+    <li>
+      <strong>display: flex;</strong> Aktivira flexbox raspored unutar kontejnera. Svi njegovi direktni potomci postaju flex elementi.
+    </li>
+    <li>
+      <strong>flex-direction:</strong> Određuje smjer glavne osi — može biti <code>row</code>, <code>row-reverse</code>, <code>column</code> ili <code>column-reverse</code>.
+    </li>
+    <li>
+      <strong>justify-content:</strong> Poravnava elemente duž glavne osi (<code>center</code>, <code>space-between</code>, <code>space-around</code>, itd.).
+    </li>
+    <li>
+      <strong>align-items:</strong> Poravnava elemente duž poprečne osi (<code>flex-start</code>, <code>center</code>, <code>stretch</code>, itd.).
+    </li>
+    <li>
+      <strong>flex-wrap:</strong> Omogućava prelamanje elemenata u novi red ako nema dovoljno prostora (<code>wrap</code>, <code>nowrap</code>, <code>wrap-reverse</code>).
+    </li>
+    <li>
+      <strong>align-content:</strong> Poravnava više redova elemenata kada se koristi <code>flex-wrap</code>.
+    </li>
+    <li>
+      <strong>gap:</strong> Postavlja razmak između flex elemenata bez potrebe za marginama.
+    </li>
+  </ul>
+  <p>
+    Flexbox olakšava izradu responzivnih i dinamičnih rasporeda, smanjujući potrebu za kompliciranim CSS pravilima i floatovima.
+  </p>
+</section>
+
    </main>
 </body>
 </html>
