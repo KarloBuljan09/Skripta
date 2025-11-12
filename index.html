@@ -24,7 +24,6 @@
   <li><a href="#pozadinska grafika">Uređivanje pozadinske grafike u Box modelu</a></li>
 </ul>
 
-  
 
     </section>
     <section id="css-html" class="post">
@@ -151,6 +150,80 @@
   <p>
     Flexbox olakšava izradu responzivnih i dinamičnih rasporeda, smanjujući potrebu za kompliciranim CSS pravilima i floatovima.
   </p>
+</section>
+<section id="responzivni-prikaz" class="post">
+  <h2>Responzivni prikaz</h2>
+  <p>
+    Responzivni dizajn omogućava da se web stranica automatski prilagodi različitim uređajima i veličinama ekrana.
+    Cilj je osigurati da sadržaj uvijek bude čitljiv i funkcionalan — bez potrebe za zumiranjem ili horizontalnim skrolanjem.
+  </p>
+
+  <h3>Osnovni principi responzivnog dizajna</h3>
+  <ul>
+    <li><strong>Fluidni raspored:</strong> Umjesto fiksnih širina (u px), koriste se postotci (%) ili fleksibilne jedinice (em, rem, vw, vh).</li>
+    <li><strong>Media query:</strong> Omogućava primjenu različitih CSS stilova ovisno o širini uređaja.</li>
+    <li><strong>Fleksibilne slike:</strong> Slike se prilagođavaju veličini kontejnera pomoću <code>max-width: 100%;</code>.</li>
+    <li><strong>Mobilni pristup:</strong> Dizajn se često prvo radi za manje ekrane (“mobile-first”), pa se postepeno prilagođava većim.</li>
+  </ul>
+
+  <h3>Primjer 1: Fleksibilni raspored</h3>
+  <pre><code>
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+  </code></pre>
+  <p>Ovim kodom osiguravamo da se kontejner i slike automatski smanje ili povećaju ovisno o veličini ekrana.</p>
+
+  <h3>Primjer 2: Media query</h3>
+  <pre><code>
+/* Osnovni stil za male ekrane */
+body {
+  font-size: 16px;
+  background-color: #f4f4f4;
+}
+
+/* Veći ekrani (tableti i računala) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    background-color: #fff;
+  }
+}
+
+/* Široki ekrani (desktop) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+  </code></pre>
+  <p>Ovim pristupom CSS mijenja izgled stranice ovisno o širini prozora preglednika.</p>
+
+  <h3>Primjer 3: Responzivni raspored s Flexboxom</h3>
+  <pre><code>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.box {
+  flex: 1 1 300px;
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+  </code></pre>
+  <p>Ovim primjerom elementi (.box) se automatski prelamaju u novi red kada nema dovoljno prostora — idealno za mobilne uređaje.</p>
+
+  <p><strong>Zaključak:</strong> Responzivni dizajn je ključan dio modernog web razvoja, jer omogućava pristupačnost i funkcionalnost na svim uređajima.</p>
 </section>
 
    </main>
