@@ -14,160 +14,134 @@
     </nav>
   </header>
 
-  <main>
-    <section>
-
-<h1>Sadržaj:</h1>
-<ul>
-  <li><a href="#css-html">Kako dodati CSS u HTML</a></li>
-  <li><a href="#box-model">CSS Box Model</a></li>
-  <li><a href="#pozadinska grafika">Uređivanje pozadinske grafike u Box modelu</a></li>
-</ul>
-
-
-    </section>
-    <section id="css-html" class="post">
-      <h2>Kako dodati CSS u HTML</h2>
-      <p>Danas smo učili kako povezati CSS sa HTML-om. Postoje tri načina:</p>
-      <ul>
-        <li><strong>Inline CSS:</strong> direktno u elementu, npr. <code>&lt;p style="color:red;"&gt;</code></li>
-        <li><strong>Internal CSS:</strong> unutar &lt;style&gt; taga u &lt;head&gt;</li>
-        <li><strong>External CSS:</strong> povezivanje vanjskog .css fajla koristeći <code>&lt;link&gt;</code></li>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">Sadržaj</div>
+      <ul class="lesson-links">
+        <li><a href="#css-html">Kako dodati CSS u HTML</a></li>
+        <li><a href="#box-model">CSS Box Model</a></li>
+        <li><a href="#pozadinska-grafika">Uređivanje pozadinske grafike u Box modelu</a></li>
+        <li><a href="#opasiti">Opacity - Gradients</a></li>
+        <li><a href="#sjene-zaobljeni-rubovi">Sjene i zaobljeni rubovi</a></li>
+        <li><a href="#css-pozicioniranje">CSS Pozicioniranje</a></li>
+        <li><a href="#flexbox">CSS Flexbox</a></li>
+        <li><a href="#responzivni-prikaz">Responzivni prikaz</a></li>
+        <li><a href="#pseudoklase">PSEUDOKLASE</a></li>
       </ul>
-      <p>Uglavnom koristimo vanjski CSS jer je najorganiziraniji i lakši za održavanje.</p>
-    </section>
-  
-    <section id="box-model" class="post">
-      <h2>CSS Box Model</style></h2>
-      <p>CSS box model opisuje kako se HTML elementi prikazuju kao pravokutnici na stranici.</p>
-      <ul>
-        <li><strong>Content:</strong> Sadržaj (tekst, slike...)</li>
-        <li><strong>Padding:</strong> Prazan prostor oko sadržaja</li>
-        <li><strong>Border:</strong> Okvir oko paddinga</li>
-        <li><strong>Margin:</strong> Vanjski razmak između elemenata</li>
-      </ul>
-      <p>Sve ove komponente utiču na konačne dimenzije i poziciju elementa.</p>
-    </section>
+    </aside>
 
-    <section id="pozadinska grafika" class="post">
-      <h2>Uređivanje pozadinske grafike u Box modelu</h2>
-      <p>Pozadinska grafika se postavlja pomoću CSS svojstva background, a može se prilagoditi veličina, pozicija i ponavljanje unutar box modela</p>
-<ul>
-  <li><strong>Background-image:</strong>Postavlja sliku kao pozadinu elementa</li>
-  
-  <li><strong>Background-size:</strong>Određuje veličinu pozadinske slike (npr. cover, contain, ili konkretne dimenzije)</li>
-  
-  <li><strong>Background-position:</strong>Pomiče sliku unutar elementa (npr. center, top left)</li>
-  
-  <li><strong>Background-repeat:</strong>Određuje ponavlja li se slika (repeat, no-repeat, itd.)</li>
-  
-  <li><strong>Background-clip:</strong>Kontroliše do kojeg dijela box modela se pozadina prikazuje (npr. content-box, padding-box, border-box)</li>
-</ul>
-<p>Kombinacijom ovih svojstava možemo precizno kontrolirati kako se pozadinska grafika prikazuje unutar svakog dijela box modela.</p>
-    </section>
- 
-    <section id="opasiti" class="post">
-      <h2>Opacity - Gradients</h2>
-      <p>Svojstva opacity i gradient koriste se za postizanje vizualnih efekata kao što su prozirnost i prijelazi boja.</p>
-      <ul>
-        <li><strong>Opacity:</strong>Određuje prozirnost cijelog elementa (vrijednosti od 0 do 1, gdje je 0 potpuno prozirno, a 1 potpuno vidljivo)</li>
-        <li><strong>RGBA boje:</strong>Omogućuju postavljanje prozirnosti samo na boju pomoću četvrte vrijednosti (npr. rgba(0, 0, 0, 0.5))</li>
-        <li><strong>Linear-gradient:</strong>Stvara prijelaz između dvije ili više boja u ravnoj liniji</li>
-        <li><strong>Radial-gradient:</strong>Stvara kružni ili eliptični prijelaz boja koji se širi iz središta</li>
-        <li><strong>Transparent:</strong>Koristi se za potpuno prozirne dijelove u gradientima</li>
-     </ul>
-<p>Korištenjem prozirnosti i prijelaza možemo poboljšati izgled elemenata i dodati vizualnu dubinu web stranici.</p>
- </section>
-  
-    <section id="Sjene i zaobljeni rubovi" class="post">
-      <h2>Sjene i zaobljeni rubovi</h2>
-      <p>Svojstva za sjene i zaobljene rubove koriste se za estetsko poboljšanje elemenata na stranici.</p>
-      <ul>
-        <li><strong>Box-shadow:</strong>Dodaje sjenku oko cijelog elementa (može se podešavati pomak, razmazanost, boja)</li>
-        <li><strong>Text-shadow:</strong>Dodaje sjenku na tekst (omogućava efekte poput sjene ili svjetlucanja)</li>
-        <li><strong>Border-radius:</strong>Zaobljuje rubove elemenata (vrijednosti u pikselima ili postocima, npr. 10px, 50%)</li>
-        <li><strong>Inset shadow:</strong>Unutrašnja sjenka (kada se koristi inset unutar box-shadow)</li>
-        <li><strong>Multiple shadows:</strong>Moguće je dodati više sjenki odjednom, odvojene zarezima</li>
-      </ul>
-<p>Sjene i zaobljeni rubovi doprinose modernijem i privlačnijem dizajnu korisničkog sučelja.</p>
-    </section>
-    <section id="CSS pozicioniranje" class="post">
-  <h2>CSS Pozicioniranje</h2>
-  <p>
-    Svojstva za pozicioniranje u CSS-u omogućavaju kontrolu nad položajem elemenata na stranici.
-    Postoji pet osnovnih tipova pozicioniranja: <strong>static, relative, absolute, fixed</strong> i <strong>sticky</strong>.
-  </p>
-  <ul>
-    <li>
-      <strong>Static:</strong> Zadana vrijednost za sve elemente. Element se pozicionira u toku dokumenta bez posebnog podešavanja položaja.
-    </li>
-    <li>
-      <strong>Relative:</strong> Element se pozicionira u odnosu na svoj originalni položaj. Pomaci (<code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>) utiču samo na vizualni prikaz.
-    </li>
-    <li>
-      <strong>Absolute:</strong> Element se pozicionira u odnosu na najbližeg roditelja koji nije <code>static</code>. Ispada iz normalnog toka dokumenta.
-    </li>
-    <li>
-      <strong>Fixed:</strong> Element se pozicionira u odnosu na prozor preglednika i ostaje na mjestu čak i pri skrolanju stranice.
-    </li>
-    <li>
-      <strong>Sticky:</strong> Kombinacija <code>relative</code> i <code>fixed</code>. Element se ponaša kao relativan dok ne dođe do određene točke skrolanja, nakon čega „prilijepi“ (postane fiksiran).
-    </li>
-  </ul>
-  <p>
-    Razumijevanje različitih tipova pozicioniranja ključno je za pravilno raspoređivanje i organizaciju elemenata u web dizajnu.
-  </p>
-</section>
-<section id="Flexbox" class="post">
-  <h2>CSS Flexbox</h2>
-  <p>
-    Flexbox (Flexible Box Layout) je model rasporeda u CSS-u koji omogućava jednostavno i fleksibilno
-    poravnanje i raspored elemenata unutar kontejnera. Omogućava prilagođavanje elemenata različitim veličinama ekrana.
-  </p>
-  <ul>
-    <li>
-      <strong>display: flex;</strong> Aktivira flexbox raspored unutar kontejnera. Svi njegovi direktni potomci postaju flex elementi.
-    </li>
-    <li>
-      <strong>flex-direction:</strong> Određuje smjer glavne osi — može biti <code>row</code>, <code>row-reverse</code>, <code>column</code> ili <code>column-reverse</code>.
-    </li>
-    <li>
-      <strong>justify-content:</strong> Poravnava elemente duž glavne osi (<code>center</code>, <code>space-between</code>, <code>space-around</code>, itd.).
-    </li>
-    <li>
-      <strong>align-items:</strong> Poravnava elemente duž poprečne osi (<code>flex-start</code>, <code>center</code>, <code>stretch</code>, itd.).
-    </li>
-    <li>
-      <strong>flex-wrap:</strong> Omogućava prelamanje elemenata u novi red ako nema dovoljno prostora (<code>wrap</code>, <code>nowrap</code>, <code>wrap-reverse</code>).
-    </li>
-    <li>
-      <strong>align-content:</strong> Poravnava više redova elemenata kada se koristi <code>flex-wrap</code>.
-    </li>
-    <li>
-      <strong>gap:</strong> Postavlja razmak između flex elemenata bez potrebe za marginama.
-    </li>
-  </ul>
-  <p>
-    Flexbox olakšava izradu responzivnih i dinamičnih rasporeda, smanjujući potrebu za kompliciranim CSS pravilima i floatovima.
-  </p>
-</section>
-<section id="responzivni-prikaz" class="post">
-  <h2>Responzivni prikaz</h2>
-  <p>
-    Responzivni dizajn omogućava da se web stranica automatski prilagodi različitim uređajima i veličinama ekrana.
-    Cilj je osigurati da sadržaj uvijek bude čitljiv i funkcionalan — bez potrebe za zumiranjem ili horizontalnim skrolanjem.
-  </p>
+    <main class="content">
+      <section id="css-html" class="post">
+        <h2>Kako dodati CSS u HTML</h2>
+        <p>Danas smo učili kako povezati CSS sa HTML-om. Postoje tri načina:</p>
+        <ul>
+          <li><strong>Inline CSS:</strong> direktno u elementu, npr. <code>&lt;p style="color:red;"&gt;</code></li>
+          <li><strong>Internal CSS:</strong> unutar &lt;style&gt; taga u &lt;head&gt;</li>
+          <li><strong>External CSS:</strong> povezivanje vanjskog .css fajla koristeći <code>&lt;link&gt;</code></li>
+        </ul>
+        <p>Uglavnom koristimo vanjski CSS jer je najorganiziraniji i lakši za održavanje.</p>
+      </section>
 
-  <h3>Osnovni principi responzivnog dizajna</h3>
-  <ul>
-    <li><strong>Fluidni raspored:</strong> Umjesto fiksnih širina (u px), koriste se postotci (%) ili fleksibilne jedinice (em, rem, vw, vh).</li>
-    <li><strong>Media query:</strong> Omogućava primjenu različitih CSS stilova ovisno o širini uređaja.</li>
-    <li><strong>Fleksibilne slike:</strong> Slike se prilagođavaju veličini kontejnera pomoću <code>max-width: 100%;</code>.</li>
-    <li><strong>Mobilni pristup:</strong> Dizajn se često prvo radi za manje ekrane (“mobile-first”), pa se postepeno prilagođava većim.</li>
-  </ul>
+      <section id="box-model" class="post">
+        <h2>CSS Box Model</h2>
+        <p>CSS box model opisuje kako se HTML elementi prikazuju kao pravokutnici na stranici.</p>
+        <ul>
+          <li><strong>Content:</strong> Sadržaj (tekst, slike...)</li>
+          <li><strong>Padding:</strong> Prazan prostor oko sadržaja</li>
+          <li><strong>Border:</strong> Okvir oko paddinga</li>
+          <li><strong>Margin:</strong> Vanjski razmak između elemenata</li>
+        </ul>
+        <p>Sve ove komponente utiču na konačne dimenzije i poziciju elementa.</p>
+      </section>
 
-  <h3>Primjer 1: Fleksibilni raspored</h3>
-  <pre><code>
+      <section id="pozadinska-grafika" class="post">
+        <h2>Uređivanje pozadinske grafike u Box modelu</h2>
+        <p>Pozadinska grafika se postavlja pomoću CSS svojstva background, a može se prilagoditi veličina, pozicija i ponavljanje unutar box modela</p>
+        <ul>
+          <li><strong>Background-image:</strong> Postavlja sliku kao pozadinu elementa</li>
+          <li><strong>Background-size:</strong> Određuje veličinu pozadinske slike (npr. cover, contain, ili konkretne dimenzije)</li>
+          <li><strong>Background-position:</strong> Pomiče sliku unutar elementa (npr. center, top left)</li>
+          <li><strong>Background-repeat:</strong> Određuje ponavlja li se slika (repeat, no-repeat, itd.)</li>
+          <li><strong>Background-clip:</strong> Kontrolira do kojeg dijela box modela se pozadina prikazuje (npr. content-box, padding-box, border-box)</li>
+        </ul>
+        <p>Kombinacijom ovih svojstava možemo precizno kontrolirati kako se pozadinska grafika prikazuje unutar svakog dijela box modela.</p>
+      </section>
+
+      <section id="opasiti" class="post">
+        <h2>Opacity - Gradients</h2>
+        <p>Svojstva opacity i gradient koriste se za postizanje vizualnih efekata kao što su prozirnost i prijelazi boja.</p>
+        <ul>
+          <li><strong>Opacity:</strong> Određuje prozirnost cijelog elementa (vrijednosti od 0 do 1, gdje je 0 potpuno prozirno, a 1 potpuno vidljivo)</li>
+          <li><strong>RGBA boje:</strong> Omogućuju postavljanje prozirnosti samo na boju pomoću četvrte vrijednosti (npr. rgba(0, 0, 0, 0.5))</li>
+          <li><strong>Linear-gradient:</strong> Stvara prijelaz između dvije ili više boja u ravnoj liniji</li>
+          <li><strong>Radial-gradient:</strong> Stvara kružni ili eliptični prijelaz boja koji se širi iz središta</li>
+          <li><strong>Transparent:</strong> Koristi se za potpuno prozirne dijelove u gradientima</li>
+        </ul>
+        <p>Korištenjem prozirnosti i prijelaza možemo poboljšati izgled elemenata i dodati vizualnu dubinu web stranici.</p>
+      </section>
+
+      <section id="sjene-zaobljeni-rubovi" class="post">
+        <h2>Sjene i zaobljeni rubovi</h2>
+        <p>Svojstva za sjene i zaobljene rubove koriste se za estetsko poboljšanje elemenata na stranici.</p>
+        <ul>
+          <li><strong>Box-shadow:</strong> Dodaje sjenku oko cijelog elementa (može se podešavati pomak, razmazanost, boja)</li>
+          <li><strong>Text-shadow:</strong> Dodaje sjenku na tekst (omogućava efekte poput sjene ili svjetlucanja)</li>
+          <li><strong>Border-radius:</strong> Zaobljuje rubove elemenata (vrijednosti u pikselima ili postocima, npr. 10px, 50%)</li>
+          <li><strong>Inset shadow:</strong> Unutrašnja sjenka (kada se koristi inset unutar box-shadow)</li>
+          <li><strong>Multiple shadows:</strong> Moguće je dodati više sjenki odjednom, odvojene zarezima</li>
+        </ul>
+        <p>Sjene i zaobljeni rubovi doprinose modernijem i privlačnijem dizajnu korisničkog sučelja.</p>
+      </section>
+
+      <section id="css-pozicioniranje" class="post">
+        <h2>CSS Pozicioniranje</h2>
+        <p>
+          Svojstva za pozicioniranje u CSS-u omogućavaju kontrolu nad položajem elemenata na stranici.
+          Postoji pet osnovnih tipova pozicioniranja: <strong>static, relative, absolute, fixed</strong> i <strong>sticky</strong>.
+        </p>
+        <ul>
+          <li><strong>Static:</strong> Zadana vrijednost za sve elemente. Element se pozicionira u toku dokumenta bez posebnog podešavanja položaja.</li>
+          <li><strong>Relative:</strong> Element se pozicionira u odnosu na svoj originalni položaj. Pomaci (<code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>) utiču samo na vizualni prikaz.</li>
+          <li><strong>Absolute:</strong> Element se pozicionira u odnosu na najbližeg roditelja koji nije <code>static</code>. Ispada iz normalnog toka dokumenta.</li>
+          <li><strong>Fixed:</strong> Element se pozicionira u odnosu na prozor preglednika i ostaje na mjestu čak i pri skrolanju stranice.</li>
+          <li><strong>Sticky:</strong> Kombinacija <code>relative</code> i <code>fixed</code>. Element se ponaša kao relativan dok ne dođe do određene točke skrolanja, nakon čega „prilijepi“ (postane fiksiran).</li>
+        </ul>
+        <p>Razumijevanje različitih tipova pozicioniranja ključno je za pravilno raspoređivanje i organizaciju elemenata u web dizajnu.</p>
+      </section>
+
+      <section id="flexbox" class="post">
+        <h2>CSS Flexbox</h2>
+        <p>
+          Flexbox (Flexible Box Layout) je model rasporeda u CSS-u koji omogućava jednostavno i fleksibilno
+          poravnanje i raspored elemenata unutar kontejnera. Omogućava prilagođavanje elemenata različitim veličinama ekrana.
+        </p>
+        <ul>
+          <li><strong>display: flex;</strong> Aktivira flexbox raspored unutar kontejnera. Svi njegovi direktni potomci postaju flex elementi.</li>
+          <li><strong>flex-direction:</strong> Određuje smjer glavne osi — može biti <code>row</code>, <code>row-reverse</code>, <code>column</code> ili <code>column-reverse</code>.</li>
+          <li><strong>justify-content:</strong> Poravnava elemente duž glavne osi (<code>center</code>, <code>space-between</code>, <code>space-around</code>, itd.).</li>
+          <li><strong>align-items:</strong> Poravnava elemente duž poprečne osi (<code>flex-start</code>, <code>center</code>, <code>stretch</code>, itd.).</li>
+          <li><strong>flex-wrap:</strong> Omogućava prelamanje elemenata u novi red ako nema dovoljno prostora (<code>wrap</code>, <code>nowrap</code>, <code>wrap-reverse</code>).</li>
+          <li><strong>align-content:</strong> Poravnava više redova elemenata kada se koristi <code>flex-wrap</code>.</li>
+          <li><strong>gap:</strong> Postavlja razmak između flex elemenata bez potrebe za marginama.</li>
+        </ul>
+        <p>Flexbox olakšava izradu responzivnih i dinamičnih rasporeda, smanjujući potrebu za kompliciranim CSS pravilima i floatovima.</p>
+      </section>
+
+      <section id="responzivni-prikaz" class="post">
+        <h2>Responzivni prikaz</h2>
+        <p>
+          Responzivni dizajn omogućava da se web stranica automatski prilagodi različitim uređajima i veličinama ekrana.
+          Cilj je osigurati da sadržaj uvijek bude čitljiv i funkcionalan — bez potrebe za zumiranjem ili horizontalnim skrolanjem.
+        </p>
+        <h3>Osnovni principi responzivnog dizajna</h3>
+        <ul>
+          <li><strong>Fluidni raspored:</strong> Umjesto fiksnih širina (u px), koriste se postotci (%) ili fleksibilne jedinice (em, rem, vw, vh).</li>
+          <li><strong>Media query:</strong> Omogućava primjenu različitih CSS stilova ovisno o širini uređaja.</li>
+          <li><strong>Fleksibilne slike:</strong> Slike se prilagođavaju veličini kontejnera pomoću <code>max-width: 100%;</code>.</li>
+          <li><strong>Mobilni pristup:</strong> Dizajn se često prvo radi za manje ekrane ("mobile-first"), pa se postepeno prilagođava većim.</li>
+        </ul>
+        <h3>Primjer 1: Fleksibilni raspored</h3>
+        <pre><code>
 .container {
   width: 90%;
   margin: 0 auto;
@@ -176,11 +150,10 @@ img {
   max-width: 100%;
   height: auto;
 }
-  </code></pre>
-  <p>Ovim kodom osiguravamo da se kontejner i slike automatski smanje ili povećaju ovisno o veličini ekrana.</p>
-
-  <h3>Primjer 2: Media query</h3>
-  <pre><code>
+        </code></pre>
+        <p>Ovim kodom osiguravamo da se kontejner i slike automatski smanje ili povećaju ovisno o veličini ekrana.</p>
+        <h3>Primjer 2: Media query</h3>
+        <pre><code>
 /* Osnovni stil za male ekrane */
 body {
   font-size: 16px;
@@ -203,11 +176,10 @@ body {
     margin: auto;
   }
 }
-  </code></pre>
-  <p>Ovim pristupom CSS mijenja izgled stranice ovisno o širini prozora preglednika.</p>
-
-  <h3>Primjer 3: Responzivni raspored s Flexboxom</h3>
-  <pre><code>
+        </code></pre>
+        <p>Ovim pristupom CSS mijenja izgled stranice ovisno o širini prozora preglednika.</p>
+        <h3>Primjer 3: Responzivni raspored s Flexboxom</h3>
+        <pre><code>
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -220,12 +192,50 @@ body {
   padding: 20px;
   text-align: center;
 }
-  </code></pre>
-  <p>Ovim primjerom elementi (.box) se automatski prelamaju u novi red kada nema dovoljno prostora — idealno za mobilne uređaje.</p>
+        </code></pre>
+        <p>Ovim primjerom elementi (.box) se automatski prelamaju u novi red kada nema dovoljno prostora — idealno za mobilne uređaje.</p>
+        <p><strong>Zaključak:</strong> Responzivni dizajn je ključan dio modernog web razvoja, jer omogućava pristupačnost i funkcionalnost na svim uređajima.</p>
+      </section>
 
-  <p><strong>Zaključak:</strong> Responzivni dizajn je ključan dio modernog web razvoja, jer omogućava pristupačnost i funkcionalnost na svim uređajima.</p>
-</section>
-
-   </main>
+      <section id="pseudoklase" class="post">
+        <h2>PSEUDOKLASE</h2>
+        <p>
+          Pseudoklase u CSS-u omogućavaju stilizaciju elemenata na temelju njihovog stanja ili položaja u dokumentu.
+          Koriste se s dvotočkom (<code>:</code>) i dopunjuju selektore bez potrebe za dodatnim klasama ili ID-jevima.
+        </p>
+        <h3>Osnovne pseudoklase</h3>
+        <ul>
+          <li><strong>:hover</strong> — stil kada korisnik prelazi mišem preko elementa</li>
+          <li><strong>:active</strong> — stil u trenutku klika na element</li>
+          <li><strong>:focus</strong> — stil kada je element u fokusu (npr. input, link)</li>
+          <li><strong>:visited</strong> — stil za već posjećene linkove</li>
+          <li><strong>:first-child</strong> — prvi potomak unutar roditelja</li>
+          <li><strong>:last-child</strong> — zadnji potomak unutar roditelja</li>
+          <li><strong>:nth-child(n)</strong> — n-ti potomak (n može biti broj, even, odd ili formula)</li>
+        </ul>
+        <h3>Primjer: hover i focus</h3>
+        <pre><code>
+a:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+input:focus {
+  outline: 2px solid #0066cc;
+  border-color: #0066cc;
+}
+        </code></pre>
+        <h3>Primjer: nth-child za redove tablice</h3>
+        <pre><code>
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+tr:nth-child(even) {
+  background-color: #fff;
+}
+        </code></pre>
+        <p><strong>Zaključak:</strong> Pseudoklase su moćan način za dinamičnu stilizaciju bez dodatnog HTML-a i često se koriste za interaktivnost i čitljivost sadržaja.</p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
